@@ -1,6 +1,6 @@
 const path = require('path')
 
-const repoName = 'REPO_NAME' // 🔴 Replace with your GitHub repo name
+const repoName = 'my_portfolio_react' // 🔴 Replace with your GitHub repo name
 
 module.exports = {
   sassOptions: {
