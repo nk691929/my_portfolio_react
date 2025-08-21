@@ -3,6 +3,7 @@
   "description": "Portfolio of Noshad Ahmad",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://USERNAME.github.io/REPO_NAME",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",

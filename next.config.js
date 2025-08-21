@@ -1,10 +1,14 @@
 const path = require('path')
- 
+
+const repoName = 'REPO_NAME' // 🔴 Replace with your GitHub repo name
+
 module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
   output: 'export',
+  basePath: `/${repoName}`,
+  assetPrefix: `/${repoName}/`,
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -23,7 +27,6 @@ module.exports = {
         hostname: 'media2.dev.to',
         pathname: '**',
       },
-      
     ],
   },
 }
