@@ -9,12 +9,10 @@ export const skillsData = [
   'MongoDB',
   'Git',
   'C#',
-  'Expo',
   'Figma',
   'Firebase',
   'Supabase',
   'MaterialUI',
-  'Drawe-IO'
 ]
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.
