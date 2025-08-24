@@ -6,7 +6,7 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-  output: 'export',
+  // output: 'export',
   basePath: `/${repoName}`,
   assetPrefix: `/${repoName}/`,
   images: {

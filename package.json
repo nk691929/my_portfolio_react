@@ -6,7 +6,7 @@
   "homepage": "https://nk691929.github.io/my_portfolio_react",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "export": "next export",
     "lint": "next lint",

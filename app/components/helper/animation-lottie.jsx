@@ -1,19 +1,32 @@
-"use client"
+"use client";
 
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 
-const AnimationLottie = ({ animationPath, width }) => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationPath,
-    style: {
-      width: '95%',
+// Dynamically import lottie-react (avoids SSR issues)
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+
+const AnimationLottie = ({ animationPath, width = "95%" }) => {
+  const [animationData, setAnimationData] = useState(null);
+
+  useEffect(() => {
+    // Load JSON only on the client
+    if (typeof window !== "undefined") {
+      import(`${animationPath}`).then((data) => {
+        setAnimationData(data.default || data);
+      });
     }
-  };
+  }, [animationPath]);
+
+  if (!animationData) return null;
 
   return (
-    <Lottie {...defaultOptions} />
+    <Lottie
+      animationData={animationData}
+      loop={true}
+      autoplay={true}
+      style={{ width }}
+    />
   );
 };
 
